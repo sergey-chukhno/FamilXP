@@ -1,16 +1,13 @@
-Features
+Architecture
+AI Service (Spring Boot)
+Ollama runtime
+Local LLM (Mistral/LLaMA)
 
-Habit generation
-Behavior analysis
-Motivation messages
+Prompt Rules
+Age-adapted
+No unsafe content
+Short responses
 
-Tech
+Example Prompt
 
-Ollama
-Local LLMs (Mistral / LLaMA)
-
-Constraints
-
-Age-adapted output
-Safe responses
-Short and actionable
+""" You are a parenting assistant. Child age: 8 Goal: discipline Return 3 simple daily habits. """

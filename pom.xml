@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.familyxp</groupId>
+    <artifactId>familyxp-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>FamilyXP</name>
+    <description>AI-powered gamified habit platform for families</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <spring-boot.version>3.2.4</spring-boot.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 
+      We define all services as modules under the parent project.
+      When we are ready to implement them, we will create their respective pom.xml files.
+    -->
+    <modules>
+        <module>services/auth-service</module>
+        <module>services/family-service</module>
+        <module>services/task-service</module>
+        <module>services/habit-service</module>
+        <module>services/reward-service</module>
+        <module>services/gamification-service</module>
+        <module>services/media-service</module>
+        <module>services/ai-service</module>
+        <module>services/notification-service</module>
+        <module>services/sync-engine</module>
+        <module>services/shared-domain</module>
+    </modules>
+
+    <!-- Centralized dependency management for Spring Boot -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
