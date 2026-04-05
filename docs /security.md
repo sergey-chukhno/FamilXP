@@ -1,17 +1,19 @@
 Authentication
-
-JWT + Refresh tokens
+JWT (15 min expiry)
+Refresh tokens (7 days)
 
 Authorization
+RBAC (Parent/Child)
+Resource ownership checks
 
-Role-based access (parent/child)
+Data Security
+HTTPS enforced
+Password hashing (bcrypt)
 
-Data Protection
-
-HTTPS
-Encryption
+Media
+Signed URLs
+Private storage buckets
 
 Child Safety
-
-No public sharing
-Strict data isolation
+No public APIs for children
+Strict isolation per family

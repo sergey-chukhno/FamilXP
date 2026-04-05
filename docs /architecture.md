@@ -1,14 +1,27 @@
 High-Level Architecture
 
-Mobile App (React Native)
-API Gateway (Go)
-Microservices (Java Spring Boot)
-Database (PostgreSQL)
-Cache (Redis)
-AI Service (Ollama)
+Principles
+Clean Architecture
+Domain-Driven Design (DDD)
+SOLID principles
+Event-driven architecture
+Offline-first design
+
+Layers (per service)
+Controller (API)
+Application (use cases)
+Domain (business logic)
+Infrastructure (DB, external APIs)
+
+Tech Stack
+API Gateway: Go (Gin)
+Services: Java Spring Boot
+DB: PostgreSQL
+Cache: Redis
+Messaging: Kafka
+AI: Ollama (local LLM)
 
 Services
-
 Auth Service
 Family Service
 Task Service
@@ -18,14 +31,3 @@ Gamification Service
 Media Service
 AI Service
 Notification Service
-
-Communication
-
-REST APIs
-GraphQL Gateway
-Event-driven messaging (Kafka/RabbitMQ)
-
-Data Flow
-Mobile App → API Gateway → Microservices → Database
-
-Sync Engine → Mobile App (offline-first)

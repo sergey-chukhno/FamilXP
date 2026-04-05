@@ -1,16 +1,17 @@
-Stack
-
-React Native + Expo
-Zustand
-React Query
-SQLite
-
 Architecture
+UI Layer (React Native)
+State Layer (Zustand)
+Data Layer (SQLite)
+Sync Engine
 
-UI → Local DB → Sync Engine → API
+Rules
+UI never calls API directly
+All writes go to local DB first
+Sync is asynchronous
 
-Key Principles
-
-Offline-first
-Instant UI updates
-Background synchronization
+Example Flow
+User completes task
+Write to SQLite
+Add event to queue
+UI updates immediately
+Background sync executes

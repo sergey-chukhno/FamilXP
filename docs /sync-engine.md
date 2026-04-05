@@ -1,16 +1,17 @@
-Event Model
+Event Schema
 
-Each action generates an event stored locally.
+{ "id": "uuid", "type": "TASK_COMPLETED", "entityId": "uuid", "payload": {}, "timestamp": 0, "status": "PENDING" }
 
-Flow
+Rules
+Events are immutable
+Events must be idempotent
+Retry with exponential backoff
 
-Action occurs
-Event stored in queue
-Sync worker sends to backend
-Backend confirms
+Conflict Resolution
+Server is source of truth
+Reject invalid events
+Return correction payload
 
-Key Concepts
-
-Idempotency
-Retry mechanism
-Conflict resolution
+Retry Policy
+Retry up to 5 times
+Backoff: 1s, 2s, 5s, 10s, 30s
