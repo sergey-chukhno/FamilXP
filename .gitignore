@@ -1,0 +1,23 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Build
+target/
+build/
+out/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Mobile
+mobile/node_modules/
+mobile/android/app/build/
+mobile/ios/Pods/
+
+# Configuration/Rules
+rules.md

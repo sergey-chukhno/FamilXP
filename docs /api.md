@@ -1,13 +1,26 @@
-Architecture
-AI Service (Spring Boot)
-Ollama runtime
-Local LLM (Mistral/LLaMA)
+Conventions
+JSON only
+REST for commands
+GraphQL for queries
+Idempotent endpoints where applicable
 
-Prompt Rules
-Age-adapted
-No unsafe content
-Short responses
-Example Prompt
+Example: Create Task
 
-""" You are a parenting assistant. Child age: 8 Goal: discipline Return 3 simple daily habits. """
+POST /tasks
 
+Request: { "title": "Clean room", "rewardPoints": 10, "childId": "uuid", "dueDate": "ISO8601" }
+
+Response: { "id": "uuid", "status": "CREATED" }
+
+
+Example: Complete Task
+
+POST /tasks/{id}/complete
+
+Request: { "proofMediaId": "uuid" }
+
+Response: { "status": "PENDING_APPROVAL" }
+
+Error Model
+
+{ "error": "VALIDATION_ERROR", "message": "Title is required" }
