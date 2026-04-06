@@ -26,6 +26,7 @@
     -->
     <modules>
         <module>services/auth-service</module>
+        <!-- 
         <module>services/family-service</module>
         <module>services/task-service</module>
         <module>services/habit-service</module>
@@ -36,6 +37,7 @@
         <module>services/notification-service</module>
         <module>services/sync-engine</module>
         <module>services/shared-domain</module>
+        -->
     </modules>
 
     <!-- Centralized dependency management for Spring Boot -->
